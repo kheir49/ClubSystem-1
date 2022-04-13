@@ -5,3 +5,4 @@ class Batch():
         self.instructor = instructor
         self.sizeCap = sizeCap
         self.currentSize = 0
+        self.students = []
