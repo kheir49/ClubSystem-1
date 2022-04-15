@@ -30,6 +30,10 @@ def main():
             name = Users[i].name
             authority = Users[i].authority
             print("Welcome " + name)
+            if(authority == "Member"):
+                Batches = Users[i].batchesList
+                for batch in Batches:
+                    Users[i].receiveAnnouncements(batch)
             #While Logged In
             while True:
                 print(Users[i].getFunction())

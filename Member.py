@@ -6,30 +6,40 @@ class Member(User):
         #Inherit
         super().__init__(name, password, contactInfo, authority)
         #Useable Functions
-        self.functions = ["Signout", "Balance", "Schedule"]
+        self.functions = ["Balance", "Schedule"]
         self.balance = 0
         self.attended = 0
         self.totalClasses = 0
+        self.batchesList = []
+        self.messagesReceived = []
         self.paymentDue = False
         self.willAttend = False
         self.discount = False
-        self.penalteeFee = False
+        self.penaltyFee = False
         self.termination = False
+    def receiveAnnouncements(self, batch):
+        for batch in batchesList:
+            for announcement in batch.announcements:
+            print(batch.name + ": " + announcement)
+    def receiveMessages(self, batch):
+        for batch in batchesList:
+            for message in messagesReceived:
+            print(batch.instructor + ": " + message)
     def Pay(self, Amount):
         #Subtract amount from self
         self.balance -= Amount
         #Return Amount being paid to its destination
         return Amount
-    def Schedule(self):
+    def Schedule(self, batches):
         userInput = input("What would you like to do?: ")
     def getFunction(self):
         return self.functions
     def useFunction(self, userInput):
             #Balance
-            if(userInput.lower() == functions[1].lower()):
+            if(userInput.lower() == functions[0].lower()):
                 print(self.balance)
             #Schedule
-            elif(userInput.lower() == functions[2].lower()):
+            elif(userInput.lower() == functions[1].lower()):
                 self.Schedule()
             #Invalid Input
             else:

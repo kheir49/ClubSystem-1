@@ -11,6 +11,7 @@ class Batch():
         self.students = []
         self.membersA = []
         self.membersP = []
+        self.announcements = []
         self.functions = ["Enroll","Sort by attendence","Sort by fee paid"]
 
 
