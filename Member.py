@@ -32,5 +32,5 @@ class Member(User):
             elif(userInput.lower() == functions[2].lower()):
                 self.Schedule()
             #Invalid Input
-            else
+            else:
                 print("Invalid user input")
