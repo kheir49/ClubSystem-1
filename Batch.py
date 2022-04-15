@@ -17,7 +17,6 @@ class Batch():
     def get_batch(self):
         return self.students #returns a list of members currently enrolled in the batch
     
-    @staticmethod
     def enroll(): #enrolls member to the Batch
         pass
 
