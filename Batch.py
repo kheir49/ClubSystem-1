@@ -9,8 +9,6 @@ class Batch():
         self.sizeCap = sizeCap
         self.currentSize = 0
         self.students = []
-        self.membersA = []
-        self.membersP = []
         self.announcements = []
         self.functions = ["Enroll"]
 
