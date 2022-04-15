@@ -12,7 +12,7 @@ class Coach(User):
   #Find Batch
   def findClass(self):
     userInput = input("Please Enter the Date of the Batch (yy/mm/dd)")
-    for batch in batchList:
+    for batch in self.batchList:
       if(batch.date == userInput):
         return batch
   def classAnnouncement(batch, message):
