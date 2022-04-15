@@ -18,13 +18,13 @@ class Member(User):
         self.penaltyFee = False
         self.termination = False
     def receiveAnnouncements(self, batch):
-        for batch in batchesList:
+        for batch in self.batchesList:
             for announcement in batch.announcements:
-            print(batch.name + ": " + announcement)
+                print(batch.name + ": " + announcement)
     def receiveMessages(self, batch):
-        for batch in batchesList:
-            for message in messagesReceived:
-            print(batch.instructor + ": " + message)
+        for batch in self.batchesList:
+            for message in self.messagesReceived:
+                print(batch.instructor + ": " + message)
     def Pay(self, Amount):
         #Subtract amount from self
         self.balance -= Amount
@@ -36,10 +36,10 @@ class Member(User):
         return self.functions
     def useFunction(self, userInput):
             #Balance
-            if(userInput.lower() == functions[0].lower()):
+            if(userInput.lower() == self.functions[0].lower()):
                 print(self.balance)
             #Schedule
-            elif(userInput.lower() == functions[1].lower()):
+            elif(userInput.lower() == self.functions[1].lower()):
                 self.Schedule()
             #Invalid Input
             else:
