@@ -8,7 +8,7 @@ class Treasurer(User):
         self.functions = ["Signout", "Balance", "Hire", "Pay", "Members"]
     def currentProfit():
     def Debt():
-    def SortMembers(memberList, sortType):
+    def SortMembers(memberList, sortType): 
     def applyDiscount(allMembers, discount):
     def getFunction(self):
         return self.functions
