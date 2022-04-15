@@ -1,4 +1,4 @@
-# 
+#Note whenever the Code refers to a member, it assumes that contact info was entered as a parameter
 from User import *
 class Treasurer(User):
     #Class Init
