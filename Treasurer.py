@@ -1,3 +1,4 @@
+# 
 from User import *
 class Treasurer(User):
     #Class Init
@@ -98,7 +99,8 @@ class Treasurer(User):
     #take Attendance sorts by the most attendances
     def takeAttendance(elem):
         return elem[2]
-
+    
+    #This function itself sorts the lists, depending on the sortType entered
     def SortMembers(self, sortType):
         sortList = self.memberList
         if sortType == "Paid":
@@ -107,7 +109,7 @@ class Treasurer(User):
             sortList.sort(key=self.takeAttendance, reverse=True)
         return sortList
 
-
+    #This function applys a discount, then resets that users pay value and attendance value
     def applyDiscount(self, member):
         discount = 0.0
         memTup = None
