@@ -7,7 +7,14 @@ class Coach(User):
     super().__init__(name, password, contactInfo, authority)
     #Useable Functions
     self.functions = ["Balance", "Create Announcement", "Message Student","Pay", "Members"]
-  def findClass(date):
+    self.batchList = []
+    self.selectedBatch
+  #Find Batch
+  def findClass(self):
+    userInput = input("Please Enter the Date of the Batch (yy/mm/dd)")
+    for batch in batchList:
+      if(batch.date == userInput):
+        return batch
   def classAnnouncement(batch, message):
     batch.append(message)
   def messageStudent(batch, name, message):
@@ -22,13 +29,14 @@ class Coach(User):
       print(self.balance)
     #Hire
     elif(userInput.lower() == functions[1].lower()):
+      self.selectedBatch = self.findClass()
       self.classAnnouncements()
     #Message
     elif(userInput.lower() == functions[2].lower()):
-      userInput1 = input("Please Enter the Batch: ")
-      userInput2 = input("Please Enter the Students Name: ")
-      userInput3 = input("Please enter your message: ")
-      self.messageStudent(userInput1, userInput2, userInput3)
+      self.selectedBatch = self.findClass()
+      studentName = input("Please Enter the Students Name: ")
+      message = input("Please enter your message: ")
+      self.messageStudent(selectedBatch, studentName, message)
     #Pay
     elif(userInput.lower() == functions[3].lower()):
       self.Pay()
@@ -36,5 +44,5 @@ class Coach(User):
     elif(userInput.lower() == functions[4].lower()):
       self.Members()
     #Invalid
-    else
+    else:
       print("Invalid user input")

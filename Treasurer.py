@@ -26,5 +26,5 @@ class Treasurer(User):
         elif(userInput.lower() == functions[4].lower()):
             self.Members()
         #Invalid
-        else
+        else:
             print("Invalid user input")
