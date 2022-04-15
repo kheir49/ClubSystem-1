@@ -1,6 +1,5 @@
 
 class User():
-    functions = []
     def __init__(self, name, password, contactInfo, authority):
         self.name = name
         self.password = password
@@ -15,9 +14,3 @@ class User():
         return self.contactInfo
     def getAuthority(self):
         return self.authority
-    def userLogin(self):
-        while True:
-            print(self.functions)
-            userInput = input("What would you like to do?: ")
-            if(userInput == "Signout"):
-                break
